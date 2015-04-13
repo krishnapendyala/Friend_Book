@@ -1,0 +1,105 @@
+create database friendbook;
+
+use friendbook;
+
+
+
+CREATE TABLE admin (
+	username VARCHAR(50),
+	password VARCHAR(50)
+) ;
+
+insert into admin values ('admin','admin');
+
+
+
+
+create table feedback(
+fno int(11) NOT NULL auto_increment,
+
+about text,
+description text,
+PRIMARY KEY  (fno)
+);
+
+
+create table fgroup(
+gno int(11) NOT NULL auto_increment,
+
+gname text,
+PRIMARY KEY  (gno)
+);
+
+create table query(
+qno int(11) NOT NULL auto_increment,
+
+uname text,
+group1 text,
+about text,
+description text,
+status text,
+answer text,
+PRIMARY KEY  (qno)
+);
+
+
+create table recommend(
+
+rfrom text,
+rto text,
+rwho text,
+fname text,
+email text,
+mobile text  );
+
+
+create table request(
+
+rfrom text,
+rto text,
+fname text,
+email text,
+mobile text,
+status text  );
+
+create table rules(
+
+habits text,
+attitudes text,
+tastes text,
+moral text,
+economic text  );
+
+
+create table ugroup(
+
+gname text,
+uname text  );
+
+
+create table user(
+
+id int(11) NOT NULL auto_increment,
+
+username text,
+password text,
+fname text,
+email text,
+dob text,
+mobile text,
+habits text,
+attitudes text,
+tastes text,
+moral text,
+economic text,
+people text,
+imagess longblob,
+
+binaryimage longtext,
+
+PRIMARY KEY  (id)
+);
+
+
+
+
